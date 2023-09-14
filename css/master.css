@@ -216,6 +216,15 @@ header ul a.profile:hover {
   color: white;
   transition: 0.5s;
 }
+
+@media (max-width: 480px) {
+  header .search input {
+    width: 125px;
+  }
+  header .logo {
+    height: 20px;
+  }
+}
 /* -------------------- End NavBar ------------------  */
 
 .container {
@@ -292,6 +301,14 @@ header ul a.profile:hover {
   cursor: pointer;
 }
 
+@media (max-width: 480px) {
+  .welcome-box .info h1 {
+    font-size: 34px;
+  }
+  .head-line {
+    font-size: 16px;
+  }
+}
 /* ------------------------------------------End Welcome ------------------------ */
 
 /* -------------------------------------------Start Most popular ------------------------- */
@@ -452,6 +469,15 @@ header ul a.profile:hover {
   overflow-x: auto;
 }
 
+@media (max-width: 480px) {
+  .gaming {
+    padding-bottom: 50px;
+  }
+  .end-btn {
+    font-size: 12px;
+  }
+}
+
 /* -------------------------------------------End Most popular ------------------------- */
 
 /* Footer */
@@ -498,6 +524,24 @@ header ul a.profile:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .head-line {
+    font-size: 16px;
+  }
+  .feature .right,
+  .feature .left {
+    top: 23px;
+  }
+
+  .feature .feature-row img {
+    height: 250px;
+  }
+
+  .section .top-games .box-row {
+    font-size: 12px;
   }
 }
 
@@ -670,7 +714,7 @@ header ul a.profile:hover {
 }
 .live .main-box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   gap: 30px;
   margin: 30px auto;
 }
@@ -934,7 +978,7 @@ header ul a.profile:hover {
 /* ---------------------------------------------- */
 .details .images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   gap: 30px;
   margin: 30px auto;
 }
@@ -1002,6 +1046,23 @@ header ul a.profile:hover {
 }
 .related .related-box .info-box .data .icon div i {
   margin-right: 5px;
+}
+
+@media (max-width: 480px) {
+  .page .intro img:first-child {
+    width: 100%;
+  }
+  .page .h1-d {
+    font-size: 25px;
+  }
+
+  .details .info .info-box {
+    flex-direction: column;
+  }
+
+  .related .related-box .info-box .data {
+    width: 316px;
+  }
 }
 
 /* ========================================================================= */
@@ -1261,4 +1322,11 @@ header ul a.profile:hover {
 
 .responsive {
   overflow-x: auto;
+}
+
+@media (max-width: 480px) {
+  .main-sec img,
+  .main-sec .data {
+    width: 100%;
+  }
 }
