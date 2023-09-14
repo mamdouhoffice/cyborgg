@@ -1,0 +1,1264 @@
+:root {
+  --main-color: #ec6090;
+  --main-color-op: #ec6091a3;
+  --alt-color: #eb77a0;
+  --section-color: #27292a;
+  --page-color: #1f2122;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+body {
+  background-color: var(--page-color);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--section-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--alt-color);
+}
+/* -------------------- Start NavBar --------------  */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+}
+header .container i {
+  color: gray;
+  font-size: 30px;
+  position: absolute;
+  right: 15px;
+  display: none;
+  transition: 0.5s;
+  top: 10px;
+}
+
+header .logo {
+  position: relative;
+  cursor: pointer;
+}
+header img {
+  height: 30px;
+}
+header .logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  width: 1px;
+  height: 100%;
+  background-color: grey;
+}
+header .search {
+  position: relative;
+}
+
+@media (max-width: 993px) {
+  header .search {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+header .search::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: grey;
+}
+header .search input {
+  border-radius: 30px;
+  padding: 15px 15px 15px 40px;
+  background-color: var(--section-color);
+  width: 190px;
+  border: none;
+}
+header .search input:focus {
+  outline: 1px solid white;
+}
+header .container label {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  top: 0px;
+}
+
+header .container #drop-btn {
+  z-index: 33;
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 993px) {
+  header ul {
+    display: none;
+    position: absolute;
+    top: 43px;
+    right: 15px;
+    width: 96%;
+    height: 336px;
+    background-color: var(--page-color);
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    border-top: 5px solid var(--main-color);
+    border-bottom: 5px solid var(--main-color);
+    transition: 0.3s;
+  }
+
+  header ul li {
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+  }
+
+  header .container #drop-btn:checked + ul {
+    display: block;
+    z-index: 1000;
+  }
+  header .container #drop-btn:checked i::before {
+    content: "\f063";
+  }
+
+  header .container label i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+header ul a {
+  cursor: pointer;
+  color: gray;
+}
+
+header ul li:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  header ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+header ul a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+header ul a.select {
+  color: var(--main-color);
+}
+header ul a.profile {
+  padding: 10px 15px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  background-color: var(--section-color);
+}
+
+@media (max-width: 993px) {
+  header ul a.profile {
+    padding: 20px 0px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    background-color: var(--section-color);
+  }
+}
+header ul a.profile img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+header ul a.profile:hover {
+  background-color: var(--main-color);
+  color: white;
+  transition: 0.5s;
+}
+/* -------------------- End NavBar ------------------  */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ------------------------------------------Start Welcome ------------------------ */
+.page {
+  background-color: var(--section-color);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px auto;
+}
+.welcome-box {
+  background-image: url(../images/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  min-height: 400px;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .welcome-box {
+    text-align: center;
+  }
+}
+.welcome-box .info {
+  color: white;
+}
+.welcome-box .info h1 {
+  font-size: 50px;
+  margin-top: 20px;
+}
+.welcome-box .info h1 span {
+  color: var(--main-color);
+}
+.welcome-box .info button {
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+}
+.welcome-box .info button:hover {
+  background-color: white;
+  transition: 0.3s;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+/* ------------------------------------------End Welcome ------------------------ */
+
+/* -------------------------------------------Start Most popular ------------------------- */
+.head-line {
+  position: relative;
+  color: white;
+  padding: 0;
+  margin: 0 0 20px 0;
+  width: fit-content;
+}
+.head-line span:first-child {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .head-line {
+    font-size: 25px;
+  }
+}
+
+.head-line span:last-child {
+  color: var(--main-color);
+}
+
+.most-popular {
+  background-color: var(--page-color);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.most-popular .games {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.most-popular .games .game-box {
+  background-color: var(--section-color);
+  border-radius: 10px;
+  padding: 20px 15px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+.most-popular .games .game-box img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 150px;
+}
+.most-popular .games .game-box:hover {
+  border: 2px solid var(--main-color);
+}
+
+.most-popular .games .game-box .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 5px;
+}
+.most-popular .games .game-box .type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 13px;
+}
+.most-popular .games .game-box .type span {
+  color: gray;
+}
+
+.end-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.end-btn:hover {
+  color: var(--main-color);
+  background-color: white;
+}
+/* -------------------------------------------End Most popular ------------------------- */
+/* -------------------------------------------Start Most popular ------------------------- */
+.gaming {
+  background-color: var(--page-color);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.gaming table {
+  min-width: 1000px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+.gaming table tr {
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+}
+.gaming table tr td > div {
+  display: flex;
+  align-items: center;
+}
+.gaming table tr td {
+  width: calc((100%) / 5);
+  text-align: center;
+  padding: 20px 0;
+}
+.gaming table tr td img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+.gaming table tr td .info {
+  margin-left: 20px;
+}
+.gaming table tr td h4 {
+  color: white;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.gaming table tr td span {
+  color: gray;
+  font-size: 14px;
+}
+
+.gaming table tr td .t-btn {
+  padding: 10px 20px;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 30px;
+  background-color: var(--section-color);
+}
+
+.gaming table tr td .done {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gaming table tr td .done:hover {
+  background-color: white;
+  border: none;
+}
+.responsive {
+  overflow-x: auto;
+}
+
+/* -------------------------------------------End Most popular ------------------------- */
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+.footer h4 span {
+  text-decoration: underline;
+  font-size: 17px;
+}
+.footer h4 a {
+  color: var(--main-color);
+  border: 1px solid var(--alt-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.footer h4 a:hover {
+  color: rgba(0, 0, 255, 0.432);
+  border-color: rgba(0, 76, 255, 0.541);
+}
+/* Footer */
+
+/* ========================================================================= */
+/* ===============================> Browse <================================ */
+/* ========================================================================= */
+
+.section {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  position: relative;
+  margin: 20px auto;
+}
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .section .top-games .box-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+/* ------------------------ Start Feature --------------------- */
+.feature {
+  flex-grow: 1;
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.feature .left {
+  position: absolute;
+  font-weight: 900;
+  top: 32px;
+  right: 55px;
+}
+.feature .right {
+  position: absolute;
+  font-weight: 900;
+  top: 32px;
+  right: 40px;
+}
+
+.feature .right,
+.feature .left {
+  color: gray;
+  cursor: pointer;
+  display: block;
+  transition: color 0.3s;
+}
+.feature .right:hover,
+.feature .left:hover {
+  color: var(--main-color);
+}
+
+.feature .feature-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(161px, 1fr));
+  gap: 30px;
+}
+.feature .feature-row .image {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.feature .feature-row .image::before {
+  content: "2.5K streaming";
+  position: absolute;
+  padding: 10px 10px;
+  background-color: var(--section-color);
+  border-radius: 20px;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  font-size: 15px;
+  width: 120px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.feature .feature-row .image:hover::before {
+  bottom: 20px;
+}
+
+.feature .feature-row img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.feature .feature-row .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.feature .feature-row .type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.feature .feature-row .type span {
+  color: gray;
+  font-size: 13px;
+}
+/* ------------------------ Start Top Games --------------------- */
+.section .top-games {
+  min-width: 260px;
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.section .top-games .box-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+}
+.section .top-games .box-row img {
+  width: 100px;
+  border-radius: 20px;
+}
+.section .top-games .box-row:first-child {
+  padding-top: 0;
+}
+.section .top-games .box-row .name {
+  margin-bottom: 10px;
+}
+.section .top-games .box-row .name span {
+  color: gray;
+  font-size: 13px;
+}
+.section .top-games .box-row .name h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.section .top-games .box-row .data {
+  margin-left: -40px;
+}
+.section .top-games .box-row .data .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 15px;
+}
+.section .top-games .box-row i.last {
+  padding: 15px;
+  background-color: var(--section-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.section .top-games h2 {
+  margin-top: 23px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section .top-games h2:hover {
+  color: #eb77a0;
+  text-decoration: underline;
+}
+
+/* ------------------------------------ Strat Live Games ---------------------------- */
+
+.live {
+  padding: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.live .head-line {
+  margin: 0 auto 30px;
+}
+.live .main-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 30px auto;
+}
+.live .main-box .box {
+  padding: 30px;
+  border: 2px solid #333;
+  border-radius: 30px;
+}
+.live .main-box .box img {
+  border-radius: 50%;
+}
+.live .main-box .box h2 {
+  color: white;
+}
+.live .main-box .box p {
+  color: gray;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.live .main-box .box p span {
+  color: white;
+}
+
+/* ------------------------------------ Streamt Most Live ---------------------------- */
+.most-live {
+  padding: 20px;
+  background-color: var(--page-color);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.most-live .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+.most-live .content .box .image {
+  position: relative;
+}
+.content .box .image .btn-shape {
+  position: absolute;
+  color: white;
+  background-color: var(--main-color-op);
+  border-radius: 20px;
+  display: none;
+  transition: 0.3s;
+}
+.btn-shape.live {
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+}
+
+.btn-shape.game {
+  bottom: 30px;
+  padding: 3px 10px;
+  right: 30px;
+}
+
+.btn-shape.game .fa-gamepad:before {
+  margin-right: 5px;
+}
+.btn-shape.eye {
+  bottom: 30px;
+  left: 30px;
+  padding: 3px 7px;
+}
+
+.btn-shape.eye .fa-eye:before {
+  margin-right: 5px;
+}
+
+.content .box img:hover ~ .btn-shape {
+  display: block;
+}
+
+.most-live .content .box img {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.most-live .content .box .data {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.most-live .content .box .data img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.most-live .content .box .data .info span {
+  position: relative;
+  color: var(--main-color);
+}
+
+.most-live .box .info span .fa-check:before {
+  content: "\f00c";
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 5px;
+}
+.most-live .content .box .data .info h2 {
+  color: white;
+  font-size: 18px;
+}
+
+/* ========================================================================= */
+/* ===============================> Detials <=============================== */
+/* ========================================================================= */
+
+.page .intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .page .intro {
+    flex-direction: column;
+  }
+  .page .intro img {
+    width: 100%;
+    height: 150%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page .intro img:first-child {
+    width: 374px;
+    height: 200px;
+  }
+  .page .intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@media (max-width: 993px) {
+  .page .intro img:first-child {
+    width: 374px;
+    height: 200px;
+  }
+  .page .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+}
+.intro img {
+  border-radius: 20px;
+}
+
+.intro .video {
+  position: relative;
+}
+
+.intro .video::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f04b";
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  color: var(--main-color);
+  background-color: white;
+  padding: 10px 13px;
+  border-radius: 50%;
+}
+
+.intro .video:hover::before {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.page .h1-d {
+  margin: 40px auto;
+  width: fit-content;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ------------------Start detalis------------ */
+
+.details {
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  margin: 30px auto;
+}
+.details .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .details .info {
+    flex-direction: column;
+  }
+}
+
+.details .info .info-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--section-color);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.details .info .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.details .info .data h4 {
+  color: white;
+  margin: 5px auto 10px;
+}
+.details .info .data span {
+  color: gray;
+  font-size: 13px;
+}
+
+.details .info .data .icon div {
+  color: white;
+  margin-bottom: 5px;
+}
+.details .info .data .icon div i {
+  margin-right: 5px;
+}
+
+.details .info .info-box .ibox {
+  text-align: center;
+  text-align: center;
+  color: white;
+}
+.details .info .info-box .ibox h5 {
+  margin: 10px;
+}
+
+/* ---------------------------------------------- */
+.details .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 30px auto;
+}
+
+.details .images img {
+  border-radius: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.details p {
+  margin: 30px auto;
+  color: gray;
+  line-height: 2;
+}
+
+.details p span {
+  color: white;
+}
+
+/* ---------------------------------------------- */
+.related {
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  margin: 30px auto;
+}
+.related .related-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+.related .related-box .info-box .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.related .related-box .info-box .data .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.related .related-box .info-box .data .name img {
+  border-radius: 20px;
+}
+.related .related-box .info-box .data .name .in-name {
+  color: gray;
+}
+.related .related-box .info-box .data .name .in-name h4 {
+  color: white;
+  margin: 10px auto;
+}
+
+.related .related-box .info-box .data .icon {
+  color: white;
+}
+.related .related-box .info-box .data .icon div {
+  margin: 10px auto;
+}
+.related .related-box .info-box .data .icon div i {
+  margin-right: 5px;
+}
+
+/* ========================================================================= */
+/* ===============================> Streams <=============================== */
+/* ========================================================================= */
+
+.top-stream {
+  min-width: 260px;
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+}
+.top-stream .box-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+  padding: 10px;
+}
+.top-stream .box-t h2.number {
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.top-stream .box-t img {
+  border-radius: 50%;
+  width: 60px;
+}
+.top-stream .box-t span {
+  color: var(--main-color);
+  font-size: 20px;
+}
+.top-stream .box-t span i {
+  color: white;
+  background-color: var(--main-color);
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.top-stream .box-t button.follow {
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.top-stream .box-t button.follow:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
+/* ========================================================================= */
+/* ===============================> Profile <=============================== */
+/* ========================================================================= */
+
+.main-sec {
+  background-color: var(--page-color);
+  border-radius: 20px;
+  padding: 20px;
+}
+.up-section {
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  gap: 20px;
+}
+@media (max-width: 993px) {
+  .up-section {
+    flex-direction: column;
+  }
+}
+
+.main-sec img {
+  border-radius: 20px;
+}
+.main-sec .info .btn {
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  width: fit-content;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-sec .info .btn:hover {
+  background-color: var(--alt-color);
+}
+.main-sec .info h1 {
+  color: white;
+}
+.main-sec .info p {
+  color: gray;
+  font-size: 12px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.main-sec .info .btn-profile {
+  padding: 10px 15px;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 400;
+}
+.main-sec .data {
+  width: 350px;
+  background-color: var(--section-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+.main-sec .data .data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  color: gray;
+}
+.main-sec .data .data-row div {
+  color: var(--main-color);
+}
+
+/* ----------------------------------------------------- */
+
+.clips {
+}
+.clips .clip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px auto;
+}
+.clips .clip-grid .box {
+  padding: 20px 10px;
+  background-color: var(--section-color);
+  border-radius: 20px;
+}
+
+.clips .clip-grid .box .image {
+  width: 100%;
+  height: 158px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+.clips .clip-grid .image::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f04b";
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px 10px;
+  background-color: white;
+  border-radius: 50%;
+  color: var(--main-color);
+}
+
+.clips .clip-grid .image:hover::before {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.clips .clip-grid .box img {
+  width: 100%;
+  border-radius: 0;
+  height: 158px;
+}
+.clips .clip-grid .box .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+.clips .clip-grid .box .info span i {
+  color: var(--main-color);
+}
+
+.clips .clip-btn {
+  margin: 32px auto;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clips .clip-btn:hover {
+  background-color: var(--alt-color);
+}
+/* ---------------------------------------------------- */
+
+.gaming-profile {
+  background-color: var(--page-color);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 30px auto;
+  position: relative;
+}
+.gaming-profile table {
+  min-width: 1000px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+.gaming-profile table tr {
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
+}
+.gaming-profile table tr td > div {
+  display: flex;
+  align-items: center;
+}
+.gaming-profile table tr td {
+  width: calc((100%) / 5);
+  text-align: center;
+  padding: 20px 0;
+}
+.gaming-profile table tr td img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+.gaming-profile table tr td .info {
+  margin-left: 20px;
+}
+.gaming-profile table tr td h4 {
+  color: white;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.gaming-profile table tr td span {
+  color: gray;
+  font-size: 14px;
+}
+
+.gaming-profile table tr td .t-btn {
+  padding: 10px 20px;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 30px;
+  background-color: var(--section-color);
+}
+
+.responsive {
+  overflow-x: auto;
+}

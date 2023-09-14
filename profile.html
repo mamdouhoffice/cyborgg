@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <!-- Main css files -->
+    <link rel="stylesheet" href="css/master.css" />
+
+    <!-- Normalization files -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- Font awosome file  -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Googel font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ----------------------- Start Header ------------------------------->
+    <header>
+      <div class="container">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="" id="home" />
+        </a>
+        <div class="search">
+          <input type="search" placeholder="Type Something" />
+        </div>
+
+        <label for="drop-btn"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" id="drop-btn" />
+
+        <ul class="drob-list">
+          <li>
+            <a href="index.html"> Home </a>
+          </li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="detials.html">Detials</a></li>
+          <li><a href="stream.html">stream</a></li>
+          <li>
+            <a class="profile select" href="profile.html">
+              <span>Profile</span>
+              <div class="avtar">
+                <img src="images/profile-header.jpg" alt="" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-------------------------- End Header --------------------------------->
+
+    <!-- ----------------------- Start home ------------------------------->
+    <div class="container">
+      <div class="page">
+        <div class="main-sec">
+          <div class="up-section">
+            <img src="images/profile.jpg" alt="" />
+            <div class="info">
+              <div class="btn">Offline</div>
+              <h1>Alan Smithee</h1>
+              <p>
+                You Haven't Gone Live yet. Go Live By Touching The Button Below.
+              </p>
+              <h3 class="btn-profile">Start Live Stream</h3>
+            </div>
+            <div class="data">
+              <div class="data-row">
+                <h4>Games Downloaded</h4>
+                <div>3</div>
+              </div>
+              <div class="data-row">
+                <h4>Friends Online</h4>
+                <div>16</div>
+              </div>
+              <div class="data-row">
+                <h4>Live Streams</h4>
+                <div>None</div>
+              </div>
+              <div class="data-row">
+                <h4>Clips</h4>
+                <div>29</div>
+              </div>
+            </div>
+          </div>
+          <div class="clips">
+            <h1 class="head-line">
+              <span>Your Most Popular</span>
+              <span>Clips</span>
+            </h1>
+
+            <div class="clip-grid">
+              <div class="box">
+                <div class="image">
+                  <img src="images/featured-01.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div>First Clip</div>
+                  <span>
+                    <i class="fa-solid fa-eye"></i>
+                    250
+                  </span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="image">
+                  <img src="images/featured-02.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div>Second Clip</div>
+                  <span>
+                    <i class="fa-solid fa-eye"></i>
+                    183
+                  </span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="image">
+                  <img src="images/featured-03.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div>Third Clip</div>
+                  <span>
+                    <i class="fa-solid fa-eye"></i>
+                    141
+                  </span>
+                </div>
+              </div>
+              <div class="box">
+                <div class="image">
+                  <img src="images/popular-05.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div>Fourth Clip</div>
+                  <span>
+                    <i class="fa-solid fa-eye"></i>
+                    91
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <button class="clip-btn">Load More Clips</button>
+          </div>
+        </div>
+
+        <div class="gaming-profile">
+          <h1 class="head-line">
+            <span>Your Gaming</span>
+            <span>Library</span>
+          </h1>
+
+          <div class="responsive">
+            <table>
+              <tr>
+                <td>
+                  <div>
+                    <img src="images/popular-05.jpg" alt="" />
+                    <div class="info">
+                      <h4>Dota 2</h4>
+                      <span>Sandbox</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h4>Data Added</h4>
+                  <span>24/8/2023</span>
+                </td>
+                <td>
+                  <h4>Hours Played</h4>
+                  <span>232 H 23 Mins</span>
+                </td>
+                <td>
+                  <h4>Currently</h4>
+                  <span>Downloaded</span>
+                </td>
+                <td>
+                  <button class="t-btn">Downloaded</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div>
+                    <img src="images/popular-01.jpg" alt="" />
+                    <div class="info">
+                      <h4>Fortnite</h4>
+                      <span>Sandbox</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h4>Data Added</h4>
+                  <span>24/8/2023</span>
+                </td>
+                <td>
+                  <h4>Hours Played</h4>
+                  <span>564 H 23 Mins</span>
+                </td>
+                <td>
+                  <h4>Currently</h4>
+                  <span>Downloaded</span>
+                </td>
+                <td>
+                  <button class="t-btn">Downloaded</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div>
+                    <img src="images/popular-02.jpg" alt="" />
+                    <div class="info">
+                      <h4>Cs - Go</h4>
+                      <span>Sandbox</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h4>Data Added</h4>
+                  <span>24/8/2023</span>
+                </td>
+                <td>
+                  <h4>Hours Played</h4>
+                  <span>232 H 23 Mins</span>
+                </td>
+                <td>
+                  <h4>Currently</h4>
+                  <span>Downloaded</span>
+                </td>
+                <td>
+                  <button class="t-btn">Downloaded</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h4>
+          <span>MADE BY</span>
+          <a href="https://www.facebook.com/mamdouh.officee" target="_blank"
+            >MAMDOUH</a
+          >
+        </h4>
+      </div>
+    </div>
+    <!-------------------------- End home --------------------------------->
+  </body>
+</html>
