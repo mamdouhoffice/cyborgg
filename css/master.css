@@ -1208,6 +1208,13 @@ header ul a.profile:hover {
   border-radius: 30px;
   color: var(--main-color);
   font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-sec .info .btn-profile:hover {
+  color: white;
+  background-color: var(--main-color);
 }
 .main-sec .data {
   width: 350px;
