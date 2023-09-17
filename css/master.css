@@ -57,6 +57,7 @@ header .container i {
   display: none;
   transition: 0.5s;
   top: 10px;
+  cursor: pointer;
 }
 
 header .logo {
@@ -81,8 +82,12 @@ header .search {
 
 @media (max-width: 993px) {
   header .search {
-    right: 50%;
-    transform: translateX(50%);
+    display: block;
+    width: 100%;
+    margin: 22px auto;
+  }
+  header .search input {
+    width: 100%;
   }
 }
 
@@ -101,8 +106,9 @@ header .search input {
   border-radius: 30px;
   padding: 15px 15px 15px 40px;
   background-color: var(--section-color);
-  width: 190px;
+  width: 100%;
   border: none;
+  color: white;
 }
 header .search input:focus {
   outline: 1px solid white;
@@ -132,14 +138,14 @@ header ul {
     top: 43px;
     right: 15px;
     width: 96%;
-    height: 336px;
+    height: 0;
     background-color: var(--page-color);
     text-align: center;
     padding: 20px;
     border-radius: 0;
     border-top: 5px solid var(--main-color);
     border-bottom: 5px solid var(--main-color);
-    transition: 0.3s;
+    transition: height 0.3s;
   }
 
   header ul li {
@@ -151,6 +157,7 @@ header ul {
   header .container #drop-btn:checked + ul {
     display: block;
     z-index: 1000;
+    height: 336px;
   }
   header .container #drop-btn:checked i::before {
     content: "\f063";
@@ -194,6 +201,10 @@ header ul a.profile {
   height: 42px;
   background-color: var(--section-color);
 }
+header ul a.select.profile {
+  background-color: var(--main-color);
+  color: white;
+}
 
 @media (max-width: 993px) {
   header ul a.profile {
@@ -218,9 +229,6 @@ header ul a.profile:hover {
 }
 
 @media (max-width: 480px) {
-  header .search input {
-    width: 125px;
-  }
   header .logo {
     height: 20px;
   }
@@ -265,7 +273,7 @@ header ul a.profile:hover {
 .welcome-box {
   background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   border-radius: 20px;
   display: flex;
   min-height: 400px;
@@ -281,7 +289,7 @@ header ul a.profile:hover {
   color: white;
 }
 .welcome-box .info h1 {
-  font-size: 50px;
+  font-size: 35px;
   margin-top: 20px;
 }
 .welcome-box .info h1 span {
@@ -499,8 +507,9 @@ header ul a.profile:hover {
 }
 
 .footer h4 a:hover {
-  color: rgba(0, 0, 255, 0.432);
-  border-color: rgba(0, 76, 255, 0.541);
+  color: white;
+  background-color: var(--alt-color);
+  border-color: var(--main-color);
 }
 /* Footer */
 
@@ -583,6 +592,9 @@ header ul a.profile:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(161px, 1fr));
   gap: 30px;
+  padding-right: 25px;
+  overflow: scroll;
+  max-height: 435px;
 }
 .feature .feature-row .image {
   position: relative;
@@ -1012,13 +1024,25 @@ header ul a.profile:hover {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
 }
+
+.related .related-box .info-box {
+  margin: 0 10px;
+}
 .related .related-box .info-box .data {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 20px;
+}
+.related .related-box .info-box:not(:last-child) {
   border-bottom: 2px solid #333;
+}
+
+@media (min-width: 993px) {
+  .related .related-box .info-box:nth-child(5) {
+    border-bottom: none;
+  }
 }
 
 .related .related-box .info-box .data .name {
@@ -1082,6 +1106,7 @@ header ul a.profile:hover {
   gap: 20px;
   border-bottom: 1px solid #333;
   padding: 10px;
+  flex-wrap: wrap;
 }
 .top-stream .box-t h2.number {
   color: white;
@@ -1111,6 +1136,16 @@ header ul a.profile:hover {
   border: none;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (max-width: 993px) {
+  .top-stream .box-t button.follow {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .top-stream .box-t {
+    justify-content: center;
+  }
 }
 
 .top-stream .box-t button.follow:hover {
